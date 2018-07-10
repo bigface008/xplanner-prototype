@@ -6,7 +6,8 @@
     "pages/planners/management/management",
     "pages/planners/extensionDetails/extensionDetails",
     "pages/settings/settings",
-    "extensions/reader/reader"
+    "extensions/reader/reader",
+    "extensions/spider/spider"
   ],
   "tabBar": {
     "color": "#515151",

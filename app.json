@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/schedular/schedular",
+    "pages/schedular/scheduleDetails/scheduleDetails",
+    "pages/planners/planners",
+    "pages/planners/management/management",
+    "pages/planners/extensionDetails/extensionDetails",
+    "pages/settings/settings",
+    "extensions/reader/reader"
+  ],
+  "tabBar": {
+    "color": "#515151",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "icons/11.png",
+        "iconPath": "icons/1.png",
+        "pagePath": "pages/schedular/schedular",
+        "text": "日程"
+      },
+      {
+        "selectedIconPath": "icons/22.png",
+        "iconPath": "icons/2.png",
+        "pagePath": "pages/planners/planners",
+        "text": "扩展"
+      },
+      {
+        "selectedIconPath": "icons/33.png",
+        "iconPath": "icons/3.png",
+        "pagePath": "pages/settings/settings",
+        "text": "设置"
+      }
+    ]
+  }
+}

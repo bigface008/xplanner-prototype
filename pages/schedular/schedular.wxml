@@ -1,0 +1,24 @@
+<view class="weui-navbar" scroll-x="true" scroll-into-view="{{topView}}">
+  <view class="{{activeIndex == 0 ?'item_on':''}} default-item" bindtap="tabClick">今天</view>
+  <view class="{{activeIndex == 1 ?'item_on':''}} default-item" bindtap="tabClick">明天</view>
+</view>
+
+<swiper current="{{activeIndex}}" class="swiper-box" duration="250" bindchange="bindChange" style="height:{{height}}px">
+  <block wx:for="{{pageData}}" wx:key='key'>
+    <swiper-item class="swiper-item">
+      <view class='xplanner'>
+        <text class='line1'>XPLANNER</text>
+        <text class='line2'>
+    An extensible and intelligent time schedule for your university life
+    </text>
+      </view>
+      <view class='list-item' wx:for="{{scheduleItems}}" bindtap='detail' wx:key='key' data-id='{{index}}'>
+        <text class='item-title'>{{item.title}}</text>
+        <text class='item-time'>
+          {{"from "+item.start_time + " to " + item.end_time}}
+        </text>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<image src="/icons/plus-circle.png" class="add-schedule" bindtap="addSchedule"></image>

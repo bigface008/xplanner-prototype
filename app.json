@@ -6,6 +6,7 @@
     "pages/planners/management/management",
     "pages/planners/extensionDetails/extensionDetails",
     "pages/settings/settings",
+    "pages/settings/userSettings/userSettings",
     "extensions/reader/reader",
     "extensions/spider/spider"
   ],

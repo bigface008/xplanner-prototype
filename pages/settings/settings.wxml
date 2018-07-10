@@ -1,0 +1,13 @@
+<view class="weui-panel weui-panel_access">
+  <view class="weui-panel__hd">账户信息</view>
+  <view class="weui-panel__bd">
+    <navigator url="/pages/settings/userSettings/userSettings" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{userInfo.avatar}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{userInfo.name}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

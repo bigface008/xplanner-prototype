@@ -1,4 +1,5 @@
 var extensions = require("/data/extensions");
+var userInfo = require("/data/userInfo");
 
 function handleDatafromBackEnd(extensions_raw) {
   var result = [];
@@ -56,7 +57,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
+    userInfo: userInfo,
     extensions: handleDatafromBackEnd(extensions),
     scheduleItems: [{
         "title": "Have lunch",

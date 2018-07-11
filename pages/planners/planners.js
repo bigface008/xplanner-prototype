@@ -1,6 +1,6 @@
 var app = getApp();
 var sliderWidth = 120; // 需要设置slider的宽度，用于计算中间位置
-var User_planner_setting = [0, 2]; //从后端传来的已安装扩展数组
+var User_planner_setting = [0, 1, 2]; //从后端传来的已安装扩展数组
 var extensions = app.globalData.extensions;
 var mtabW;
 

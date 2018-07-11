@@ -3,22 +3,37 @@
   <view class="{{activeIndex == 1 ?'item_on':''}} default-item" bindtap="tabClick">明天</view>
 </view>
 
-<swiper current="{{activeIndex}}" class="swiper-box" duration="250" bindchange="bindChange" style="height:{{height}}px">
-  <block wx:for="{{pageData}}" wx:key='key'>
-    <swiper-item class="swiper-item">
-      <view class='xplanner'>
-        <text class='line1'>XPLANNER</text>
-        <text class='line2'>
-    An extensible and intelligent time schedule for your university life
-    </text>
+<view hidden='{{true}}' class='fixTop' bindtap='unfold'>
+  <text>{{time}}:00 PM</text>
+</view>
+
+<swiper current="{{activeIndex}}" class="swiper-box" duration="250" bindchange="bindChange" style="height:{{height+3}}px">
+
+  <swiper-item class="swiper-item">
+    <view class='xplanner'>
+      <text class='line1'>XPLANNER</text>
+      <text class='line2'>An extensible and intelligent time schedule for your university life</text>
+    </view>
+    <view wx:for="{{scheduleItems}}" wx:key='key' data-id='{{index}}'>
+      <view hidden='{{true}}' class='top' bindtap='unfold'>
+        <text>{{index}}:00 PM</text>
       </view>
-      <view class='list-item' wx:for="{{scheduleItems}}" bindtap='detail' wx:key='key' data-id='{{index}}'>
-        <text class='item-title'>{{item.title}}</text>
-        <text class='item-time'>
-          {{"from "+item.start_time + " to " + item.end_time}}
-        </text>
+
+      <view class="item">
+        <checkbox hidden="{{showCheck}}"class="item-checkbox" color="deepskyblue"></checkbox>
+      
+        <view class='list-item' bindtap='detail' bind:longpress="">
+          <text class='item-title item{{index%4}}'>{{item.title}}</text>
+          <text class='item-time'>
+            {{"FROM "+item.start_time + " TO " + item.end_time}}
+          </text>
+        </view>
       </view>
-    </swiper-item>
-  </block>
+
+    </view>
+  </swiper-item>
+  <swiper-item>
+    show week
+  </swiper-item>
 </swiper>
 <image src="/icons/plus-circle.png" class="add-schedule" bindtap="addSchedule"></image>

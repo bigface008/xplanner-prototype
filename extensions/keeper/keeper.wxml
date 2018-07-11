@@ -1,1 +1,6 @@
-<view>Keeper</view>
+<view  class = "weui-navbar">
+  <block hover-class="weui-grid_active">
+    <image src="../../icons/location.png" style='float:left' class="icon"/>
+    <text>{{location}}</text>
+  </block>
+</view>

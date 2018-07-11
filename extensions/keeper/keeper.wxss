@@ -1,0 +1,16 @@
+.weui-navbar {
+  height: 28px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+}
+
+.weui-grid_active {
+  background-color: #ececec;
+}

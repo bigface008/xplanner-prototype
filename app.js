@@ -87,30 +87,57 @@ App({
         "user_id": 1
       },
       {
-        "title": "Take a shower",
+        "title": "Go to school",
         "start_time": "2016.6.21",
         "end_time": "2016.6.22",
         "description": "Eat more and more and more Eat more and more and more Eat more and more and more",
         "address": "The second eatery",
-        "scheduleItem_id": 4,
+        "scheduleItem_id": 2,
         "user_id": 1
       },
       {
-        "title": "Study English",
+        "title": "Do sports",
         "start_time": "2016.6.21",
         "end_time": "2016.6.22",
         "description": "Eat more and more and more Eat more and more and more Eat more and more and more",
         "address": "The second eatery",
-        "scheduleItem_id": 5,
+        "scheduleItem_id": 3,
         "user_id": 1
       },
       {
-        "title": "Water the flowers",
+        "title": "Go to school",
         "start_time": "2016.6.21",
         "end_time": "2016.6.22",
         "description": "Eat more and more and more Eat more and more and more Eat more and more and more",
         "address": "The second eatery",
-        "scheduleItem_id": 5,
+        "scheduleItem_id": 2,
+        "user_id": 1
+      },
+      {
+        "title": "Do sports",
+        "start_time": "2016.6.21",
+        "end_time": "2016.6.22",
+        "description": "Eat more and more and more Eat more and more and more Eat more and more and more",
+        "address": "The second eatery",
+        "scheduleItem_id": 3,
+        "user_id": 1
+      },
+      {
+        "title": "Go to school",
+        "start_time": "2016.6.21",
+        "end_time": "2016.6.22",
+        "description": "Eat more and more and more Eat more and more and more Eat more and more and more",
+        "address": "The second eatery",
+        "scheduleItem_id": 2,
+        "user_id": 1
+      },
+      {
+        "title": "Do sports",
+        "start_time": "2016.6.21",
+        "end_time": "2016.6.22",
+        "description": "Eat more and more and more Eat more and more and more Eat more and more and more",
+        "address": "The second eatery",
+        "scheduleItem_id": 3,
         "user_id": 1
       },
     ]

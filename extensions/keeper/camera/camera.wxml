@@ -1,4 +1,10 @@
-<view class="weui-cells__title">图片识别</view>
+<view class="weui-navbar">
+  <block hover-class="weui-grid_active">
+    <image src="../../../icons/location.png" style='float:left' class="icon" />
+    <text>{{location}}</text>
+  </block>
+</view>
+<view class="weui-cells__title">上传图片，完成后点击确认。</view>
 <view class="weui-cells weui-cells_after-title">
   <view class="weui-cell">
     <view class="weui-cell__bd">
@@ -21,14 +27,6 @@
     </view>
   </view>
 </view>
-<view class="weui-cells__title">文本识别</view>
-<view class="weui-cells weui-cells_after-title">
-  <view class="weui-cell">
-    <view class="weui-cell__bd">
-      <textarea class="weui-textarea" placeholder="请输入文本" style="height: 6.6em" maxlength="200" />
-    </view>
-  </view>
-</view>
 <view class="button-sp-area">
-  <button class="weui-btn" bindtap="showResult" type="primary">提交文本</button>
+  <button class="weui-btn" bindtap="sendPictures" type="primary">确认</button>
 </view>

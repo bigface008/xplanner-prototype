@@ -16,7 +16,7 @@ function handleDatafromBackEnd(extensions_raw) {
     tmp.extension_path = "/extensions/" + name + "/" + name;
     result.push(tmp);
   }
-  console.log(result);
+  // console.log(result);
   return result;
 }
 
@@ -59,6 +59,7 @@ App({
   globalData: {
     userInfo: userInfo,
     extensions: handleDatafromBackEnd(extensions),
+    userFoodEaten: [],
     scheduleItems: [{
         "title": "Have lunch",
         "start_time": "2016.6.21",

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "extensions/keeper/selector/selector",    
     "pages/schedular/schedular",
     "pages/schedular/scheduleDetails/scheduleDetails",
     "pages/planners/planners",
@@ -8,6 +9,8 @@
     "pages/settings/settings",
     "pages/settings/userSettings/userSettings",
     "extensions/keeper/keeper",
+    "extensions/keeper/camera/camera",
+    "extensions/keeper/output/output",
     "extensions/reader/reader",
     "extensions/spider/spider",
     "pages/schedular/addSchedule/add"

@@ -1,3 +1,20 @@
+.weui-navbar {
+  height: 28px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+}
+
+.weui-grid_active {
+  background-color: #ececec;
+}
+
 .weui-cells__title {
   margin-top: 0.77em;
   margin-bottom: 0.3em;
@@ -112,4 +129,10 @@
 .weui-uploader__input-box:after {
   width: 39.5px;
   height: 2px;
+}
+
+.button-sp-area {
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 60%;
 }

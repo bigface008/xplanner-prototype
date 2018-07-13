@@ -44,6 +44,14 @@
   overflow: hidden;
 }
 
+.type-navbar {
+  white-space: nowrap;
+  height: 88rpx;
+  width: 100%;
+  background-color: #fff;
+  overflow: scroll;
+}
+
 .type-navbar-item {
   border-bottom: 4rpx solid #fff;
 }

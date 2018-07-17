@@ -253,6 +253,7 @@ page {
   width: 14px;
   height: 14px;
   margin-right: 5px;
+  padding-top: 2px;
 }
 
 .schedule-end-time {

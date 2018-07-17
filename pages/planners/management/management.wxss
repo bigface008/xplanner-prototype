@@ -34,7 +34,6 @@
 .weui-media-box {
   padding: 15px;
   position: relative;
-  border-bottom: 1px solid #d9d9d9;
 }
 
 .weui-media-box:before {
@@ -46,7 +45,6 @@
   height: 1px;
   border-top: 1rpx solid #e5e5e5;
   color: #e5e5e5;
-  /* left: 15px; */
 }
 
 .weui-media-box_appmsg {

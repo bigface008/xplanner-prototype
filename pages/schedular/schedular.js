@@ -4,7 +4,11 @@ Page({
   data: {
     showCheck: true,
     tabs: ["今天", "明天"],
-    pageData: [{ "data": "pageA" }, { "data": "pageB" }], //page数据
+    pageData: [{
+      "data": "pageA"
+    }, {
+      "data": "pageB"
+    }], //page数据
     activeIndex: 0,
     slideOffset: 0,
     index: 0,
@@ -16,10 +20,10 @@ Page({
     hideFixTop: true,
     time: 0,
   },
-  onLoad: function () {
+  onLoad: function() {
     var that = this;
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         that.setData({
           sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
           sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
@@ -30,19 +34,19 @@ Page({
       height: 86.796875 * (that.data.scheduleItems.length) + 540,
     })
   },
-  bindChange: function (e) {
+  bindChange: function(e) {
     var current = e.detail.current;
     this.setData({
       activeIndex: current,
       index: current,
     });
   },
-  detail: function (event) {
+  detail: function(event) {
     wx.navigateTo({
       url: '/pages/schedular/scheduleDetails/scheduleDetails?id=' +
-      event.currentTarget.dataset.id
-      + '&day=' +
-      this.data.tabs[this.data.activeIndex],
+        event.currentTarget.dataset.id +
+        '&day=' +
+        this.data.tabs[this.data.activeIndex],
     })
   },
   addSchedule() {
@@ -50,21 +54,26 @@ Page({
       url: '/pages/schedular/addSchedule/add',
     })
   },
-  onPageScroll: function (e) {
+  onPageScroll: function(e) {
 
     if (e.scrollTop > 228) {
       this.setData({
         hideFixTop: false,
         time: parseInt((e.scrollTop - 228) / 304.390625) * 3,
       });
-    }
-    else
+    } else
       this.setData({
         hideFixTop: true,
       })
   },
 
-  unfold:function(){
-    console.log("sb")
-  }
+  unfold: function() {
+    console.log("sb");
+  },
+
+  tabClick: function() {
+    this.setData({
+      
+    });
+  },
 })

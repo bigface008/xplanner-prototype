@@ -1,31 +1,35 @@
-<view class="weui-panel weui-panel_access">
-  <block wx:if="{{!logined}}" class="xplanner-login">
-    <view class="weui-cells__title">XPlanner账户</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">名称</view>
+<view wx:if="{{!logined}}">
+  <view class="weui-panel weui-panel_access">
+    <block class="xplanner-login">
+      <view class="weui-cells__title">XPlanner账户</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">名称</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入名称" bindinput="getName" />
+          </view>
         </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="请输入名称" />
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">密码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入密码" bindinput="getPassword" password="{{!password_visible}}" />
+          </view>
+          <view class="weui-cell__ft">
+            <image src="{{eye_path}}" class="visible-icon" bindtap="changeVisiblity"/>
+          </view>
         </view>
       </view>
-      <view class="weui-cell weui-cell_input">
-        <view class="weui-cell__hd">
-          <view class="weui-label">密码</view>
-        </view>
-        <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="请输入密码" />
-        </view>
-      </view>
-    </view>
-  </block>
+    </block>
+  </view>
+  <button class="login-xplanner" type="primary">使用XPlanner账号登录</button>
+  <button class="login-wechat" type="default">使用微信账号登录</button>
+  <view class="register-link">点击此处注册XPlanner账号</view>
 </view>
-<!-- <block class="wechat-login"> -->
-<button wx:if="{{!logined}}" class="login-xplanner" type="primary">使用XPlanner账号登录</button>
-<button wx:if="{{!logined}}" class="login-wechat" type="default">使用微信账号登录</button>
-<!-- </block> -->
-<view class="register-link">点击此处注册XPlanner账号</view>
+
 <block class="user-info" wx:if="{{logined}}">
   <view class="weui-panel__hd">账户信息</view>
   <view class="weui-panel__bd">

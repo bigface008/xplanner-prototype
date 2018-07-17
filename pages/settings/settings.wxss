@@ -149,6 +149,12 @@
   border-top: 1px solid #e5e5e5;
 }
 
+.weui-cell__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
 .weui-cell__hd_in-select-after {
   padding-left: 15px;
 }
@@ -172,5 +178,18 @@
 }
 
 .login-wechat {
-   /* padding-bottom: 10px;  */
+  /* padding-bottom: 10px;  */
+}
+
+.weui-cell__ft {
+  text-align: right;
+  /* float: right; */
+}
+
+.visible-icon {
+  text-align: right;
+  width: 25px;
+  height: 25px;
+  padding-top: 4px;
+  /* margin-right: 5px; */
 }

@@ -14,7 +14,7 @@
       <text class='line1'>XPLANNER</text>
       <text class='line2'>An extensible and intelligent time schedule for your university life</text>
     </view>
-    <view wx:for="{{scheduleItems}}" wx:key='key' data-id='{{index}}'>
+    <!-- <view wx:for="{{scheduleItems}}" wx:key='key' data-id='{{index}}'>
       <view hidden='{{true}}' class='top' bindtap='unfold'>
         <text>{{index}}:00 PM</text>
       </view>
@@ -30,6 +30,28 @@
         </view>
       </view>
 
+    </view> -->
+    <view class="weui-panel">
+      <!-- <view class="weui-panel__hd">已安装扩展</view> -->
+      <view class="weui-panel__bd">
+        <block wx:for="{{scheduleItems}}" wx:key="{{item.id}}">
+          <view class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bind:longpress="" data-id="{{item.id}}" bindtap="detail">
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">
+                <view>
+                  <image src="/icons/item.png" class="schedule-icon" />{{item.title}}
+                </view>
+              </view>
+              <view class="weui-media-box__desc">
+                <image src="/icons/time.png" class="schedule-icon" />{{"FROM "+item.start_time + " TO " + item.end_time}}
+              </view>
+              <view class="weui-media-box__desc">
+                <image src="/icons/address.png" class="schedule-icon" />{{item.address}}
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
     </view>
   </swiper-item>
   <swiper-item>

@@ -15,6 +15,15 @@ function filterAndSetGlobalExtensions(settings) {
   return app.globalData.extensions;
 }
 
+/*
+ * getExtensionsInfoFromBackEnd
+ * 从后端获取用户安装扩展对应数组
+ */
+function getExtensionsInfoFromBackEnd() {
+  var tmp = User_planner_setting;
+  return tmp;
+}
+
 Page({
   data: {
     tabs: ["推荐", "已安装"], //tob标题
@@ -37,11 +46,11 @@ Page({
         })
       }
     });
-    var tmp = filterAndSetGlobalExtensions(User_planner_setting);
+    var settings = getExtensionsInfoFromBackEnd(); // 用户安装扩展对应的数组
+    var tmp = filterAndSetGlobalExtensions(settings); // 过滤并设置全局数据
     this.setData({
       extensions: tmp,
     });
-    console.log(app.globalData.extensions);
   },
   onShow: function() {
     this.setData({
@@ -49,6 +58,10 @@ Page({
     })
   },
 
+  /*
+   * tabClick
+   * 响应点击顶部tab
+   */
   tabClick: function(e) {
     console.log(e)
     var that = this;
@@ -65,6 +78,11 @@ Page({
       slideOffset: offsetW
     });
   },
+
+  /*
+   * bindChange
+   * 响应幻灯片切换
+   */
   bindChange: function(e) {
     var current = e.detail.current;
     var offsetW = current * mtabW;
@@ -76,6 +94,11 @@ Page({
     });
     console.log(this.data.topView + ' ' + offsetW)
   },
+
+  /*
+   * gotoManagement
+   * 前往管理扩展页面
+   */
   gotoManagement: function(e) {
     wx.navigateTo({
       url: "/pages/planners/management/management"

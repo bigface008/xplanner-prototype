@@ -1,6 +1,5 @@
 {
   "pages": [
-    "extensions/keeper/selector/selector",    
     "pages/schedular/schedular",
     "pages/schedular/scheduleDetails/scheduleDetails",
     "pages/planners/planners",
@@ -8,10 +7,11 @@
     "pages/planners/extensionDetails/extensionDetails",
     "pages/settings/settings",
     "pages/settings/userSettings/userSettings",
+    "extensions/reader/reader",
     "extensions/keeper/keeper",
+    "extensions/keeper/selector/selector",
     "extensions/keeper/camera/camera",
     "extensions/keeper/output/output",
-    "extensions/reader/reader",
     "extensions/spider/spider",
     "pages/schedular/addSchedule/add"
   ],
@@ -26,8 +26,8 @@
         "text": "日程"
       },
       {
-        "selectedIconPath": "icons/22.png",
-        "iconPath": "icons/2.png",
+        "selectedIconPath": "icons/puzzle-selected.png",
+        "iconPath": "icons/puzzle.png",
         "pagePath": "pages/planners/planners",
         "text": "扩展"
       },

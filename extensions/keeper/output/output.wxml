@@ -25,7 +25,7 @@
 </view>
 <view class="button-sp-area">
   <view class='buttons'>
-    <button class="weui-btn" bindtap="sendFoodInfo" type="primary">确认</button>
+    <button class="weui-btn" bindtap="confirm" type="primary">确认</button>
     <button class="weui-btn" bindtap="giveUpInfo" type="default">取消</button>
   </view>
 </view>

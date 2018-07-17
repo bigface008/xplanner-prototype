@@ -34,6 +34,19 @@
 .weui-media-box {
   padding: 15px;
   position: relative;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.weui-media-box:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #e5e5e5;
+  color: #e5e5e5;
+  /* left: 15px; */
 }
 
 .weui-media-box_appmsg {

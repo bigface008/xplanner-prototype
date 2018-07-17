@@ -1,5 +1,5 @@
 var extensions = require("/data/extensions");
-var userInfo = require("/data/userInfo");
+// var userInfo = require("/data/userInfo");
 
 function handleDatafromBackEnd(extensions_raw) {
   var result = [];
@@ -16,7 +16,6 @@ function handleDatafromBackEnd(extensions_raw) {
     tmp.extension_path = "/extensions/" + name + "/" + name;
     result.push(tmp);
   }
-  // console.log(result);
   return result;
 }
 
@@ -34,7 +33,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
-    })
+    });
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -54,10 +53,11 @@ App({
           })
         }
       }
-    })
+    });
+    // console.log(this.globalData.userInfo);
   },
   globalData: {
-    userInfo: userInfo,
+    userInfo: null,
     extensions: handleDatafromBackEnd(extensions),
     userFoodEaten: [],
     scheduleItems: [{

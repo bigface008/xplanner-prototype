@@ -11,11 +11,14 @@ Page({
     })
   },
 
+  /*
+   * deleteExtension
+   * 删除扩展
+   */
   deleteExtension: function() {
-    console.log("delete " + this.data.extension.name);
 
-    // 向后端发送消息
-
+    /* 向后端发送消息 */
+    
     app.globalData.extensions[this.data.extension.id].visible = false;
     this.setData({
       extension: app.globalData.extensions[this.data.extension.id]
@@ -26,11 +29,15 @@ Page({
       duration: 1500
     });
   },
+
+  /*
+   * installExtension
+   * 安装扩展
+   */
   installExtension: function() {
-    console.log("install " + this.data.extension.name);
 
-    // 向后端发送消息
-
+    /* 向后端发送消息 */
+    
     app.globalData.extensions[this.data.extension.id].visible = true;
     this.setData({
       extension: app.globalData.extensions[this.data.extension.id]

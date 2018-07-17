@@ -43,7 +43,10 @@
                 </view>
               </view>
               <view class="weui-media-box__desc">
-                <image src="/icons/time.png" class="schedule-icon" />{{"FROM "+item.start_time + " TO " + item.end_time}}
+                <image src="/icons/time.png" class="schedule-icon" />{{"开始时间 "+item.start_time}}
+                <view class="schedule-end-time">
+                  {{"结束时间 " + item.end_time}}
+                </view>
               </view>
               <view class="weui-media-box__desc">
                 <image src="/icons/address.png" class="schedule-icon" />{{item.address}}
